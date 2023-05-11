@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #00233B;
+    --text-color: #000;
+    --second-color: #fff;
+    --main-color: #55C2B5;
+    --big-font: 5rem;
+    --h2-font: 3rem;
+    --p-font: 1.1rem;
+}
+
+body {
+    background: var(--second-color);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--main-color);
+    padding: 22px 15%;
+    box-shadow: 3px 1.4px 5px 4px #ccc;
+    transition: all .45s ease;
+}
+
+.header2 {
+    /* configuracoes quando o usuario clica no menu hamburguer */
+    background-color: var(--main-color);
+    transition: all .45s ease;
+}
+
+.logo {
+    /* configuracoes da logo */
+    color: var(--text-color);
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.navlist {
+    /* configura os links do header */
+    display: flex;
+}
+
+.navlist a {
+    /* estilo dos links do header */
+    font-size: 17px;
+    font-weight: 510;
+    color: var(--text-color);
+    margin: 0 25px;
+    transition: all .45s ease;
+    text-decoration: none;
+}
+
+.navlist a:hover {
+    /* ao passar o mouse por cima dos links do header */
+    transition: all .45s ease;
+    color: #fff;
+}
+
+.navlist a:active {
+    /* estilo do link ativo */
+    color: var(--text-color);
+}
+
+#menu-icon {
+    /* estilo do menu hamburguer (icone) */
+    font-size: 35px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    margin-left: 25px;
+    display: none;
+}
+
+main {
+    padding: 4em;
+    background-color: #fff;
+}
+
+.titulos-pagina {
+    padding-top: 3rem;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.principal {
+    margin: 0;
+    text-align: center;
+}
+
+
+.separar-textos {
+    display: flex;
+    justify-content: center;
+    margin: 10px 10px;
+}
+
+.separar-textos p {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0 0 3px;
+}
+
+.p-principal {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 3rem;
+}
+
+#texto-colocado {
+    position: static;
+    padding: 1em;
+    border-radius: 20px;
+    font-size: 1.3em;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    background: #242424;
+    color: #fff;
+    display: inline;
+    resize: none;
+
+}
+
+#texto-colocado:hover {
+    opacity: 90%;
+    transition: all .45s ease;
+    border: 1px solid black;
+}
+
+#texto-formatado {
+    position: static;
+    padding: 1em;
+    border-radius: 20px;
+    font-size: 1.3em;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    background-color: #242424;
+    color: #fff;
+    display: inline-block;
+    opacity: 100%;
+    resize: none;
+}
+
+#texto-formatado:hover {
+    opacity: 90%;
+    border: 1px solid black;
+    transition: all .45s ease;
+}
+
+.separar-botao {
+    height: 50px;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 160px;
+    height: 50px;
+    padding: 1em;
+    background-color: #242424;
+    font-weight: bold;
+    font-size: 1em;
+    color: #ffffff;
+    transition: 0.1s;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+button:hover {
+    transform: scale(105%);
+    transition: all .45s ease;
+    background-color: var(--main-color);
+}
+
+button:active {
+    border: 2px solid black;
+    transform: scale(98%);
+}
+
+.end {
+    /* estilo do footer */
+    padding: 20px 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: var(--text-color);
+}
+
+.last-text p {
+    /* estilo do p da section end (Footer) */
+    color: var(--second-color);
+    font-size: 17px;
+}
+
+.last-text p:hover {
+    /* hover do p da section end (Footer) */
+    transform: translateX(3px);
+    transition: all .55s ease;
+}
+
+.top {
+    display: flex;
+}
+
+.top i {
+    /* estilo do icone de seta da section end (Footer) */
+    padding: 10px;
+    margin-right: 1rem;
+    border-radius: 50%;
+    font-size: 30px;
+    color: var(--text-color);
+    background: var(--main-color);
+}
+
+.top i:hover {
+    /* hover do icone de seta da section end (Footer) */
+    transition: all .90s ease;
+    transform: translateY(-4px);
+    background-color: var(--text-color);
+    color: var(--main-color);
+}
+
+/* CSS RESPONSIVO =========================================== */
+@media (max-width: 840px) {
+
+    /* tela atÃ© 840px */
+    #menu-icon {
+        /* estilo do menu hamburguer */
+        /* sai do display none e mostra o menu */
+        display: block;
+    }
+
+    .navlist {
+        /* estilo da navlist - links header */
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: #242424;
+        text-align: left;
+        transition: all .45s ease;
+        box-shadow: 0 7px 7px -1px #242424;
+    }
+
+    .navlist a {
+        /* estilo dos links da navlist */
+        display: block;
+        margin: 17px;
+        font-size: 20px;
+        transition: all .45s ease;
+        color: var(--second-color);
+    }
+
+    .navlist a:hover {
+        /* hover dos links da navlist */
+        color: var(--second-color);
+    }
+
+    .navlist a:active {
+        /* links da navlist quando ativados */
+        color: var(--text-color);
+    }
+
+    .navlist.open {
+        /* links da navlist quando abertos*/
+        top: 100%;
+    }
+
+    button {
+        margin-top: 1.1rem;
+        margin-right: 0;
+    }
+}
+
+/* CSS RESPONSIVO =========================================== */
