@@ -79,9 +79,9 @@ function copia() {
 // limpa o texto das textarea
 function limpa() {
 
-    // forma preguicosa de fazer
-    // consegui fazer limpa o texto mas limpa o Placeholder junto - Não consegui resolver
-    location.reload();
+    // consegui resolver
+    document.getElementById("texto-colocado").value = "";
+    document.getElementById("texto-formatado").value = "";
 }
 
 // funcao de criptografar o texto
