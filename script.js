@@ -68,12 +68,18 @@ function verifica() {
 // apenas copia o texto descriptografado
 function copia() {
 
-    var textoFormatado = document.getElementById('texto-formatado').value;
+    if (document.getElementById("texto-colocado").value == "" || document.getElementById("texto-formatado").value == "") {
+        alert("Digite Algo!");
+    }
 
-    navigator.clipboard.writeText(textoFormatado)
-    alert("Copiado para a Área de Transferência!");
+    else {
+        var textoFormatado = document.getElementById('texto-formatado').value;
+        
+        navigator.clipboard.writeText(textoFormatado);
+        alert("Copiado para a Área de Transferência!");
 
-    limpaTela();
+        limpaTela();
+    }
 }
 
 // limpa o texto das textarea
